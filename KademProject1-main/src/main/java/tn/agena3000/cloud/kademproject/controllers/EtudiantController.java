@@ -1,5 +1,6 @@
 package tn.agena3000.cloud.kademproject.controllers;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.agena3000.cloud.kademproject.entities.Etudiant;
 import tn.agena3000.cloud.kademproject.services.IEtudiant;
@@ -7,12 +8,9 @@ import tn.agena3000.cloud.kademproject.services.IEtudiant;
 import java.util.List;
 @RestController
 @RequestMapping("/etudiant")
+@RequiredArgsConstructor
 public class EtudiantController {
     private final IEtudiant etudiantService;
-
-    public EtudiantController(IEtudiant etudiantService) {
-        this.etudiantService = etudiantService;
-    }
 
     @RequestMapping("/")
     public List<Etudiant> getAllEtudiants()

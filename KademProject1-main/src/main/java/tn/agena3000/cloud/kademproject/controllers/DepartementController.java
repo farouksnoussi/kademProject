@@ -1,5 +1,6 @@
 package tn.agena3000.cloud.kademproject.controllers;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.agena3000.cloud.kademproject.entities.Departement;
 import tn.agena3000.cloud.kademproject.services.IDepartement;
@@ -8,12 +9,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/departement")
+@RequiredArgsConstructor
 public class DepartementController {
     private final IDepartement departementService;
-
-    public DepartementController(IDepartement departementService) {
-        this.departementService = departementService;
-    }
 
     @RequestMapping("/")
     public List<Departement> getAllDepartements()

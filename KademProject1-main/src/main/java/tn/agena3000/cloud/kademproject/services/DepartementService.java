@@ -14,13 +14,13 @@ public class DepartementService implements IDepartement {
     }
 
     @Override
-    public Departement ajouterDepartement(Departement e) {
-        return departementRepository.save(e);
+    public Departement ajouterDepartement(Departement d) {
+        return departementRepository.save(d);
     }
 
     @Override
-    public void updateDepartement(Departement e) {
-        departementRepository.save(e);
+    public void updateDepartement(Departement d) {
+        departementRepository.save(d);
     }
 
     @Override
