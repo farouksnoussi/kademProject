@@ -1,6 +1,7 @@
 package tn.agena3000.cloud.kademproject.services;
 
 import tn.agena3000.cloud.kademproject.entities.Equipe;
+import tn.agena3000.cloud.kademproject.entities.Etudiant;
 
 import java.util.List;
 

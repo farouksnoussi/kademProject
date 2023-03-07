@@ -1,5 +1,6 @@
 package tn.agena3000.cloud.kademproject.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,6 +20,7 @@ public class Contrat {
     private Boolean archive;
     private Integer montantContrat;
     @ManyToOne
+    @JsonIgnore
     Etudiant etudiant;
 
 

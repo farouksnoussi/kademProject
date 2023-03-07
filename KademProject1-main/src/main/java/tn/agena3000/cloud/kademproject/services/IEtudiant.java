@@ -10,4 +10,6 @@ public interface IEtudiant {
     List<Etudiant> getAll();
     Etudiant getByID(Integer id);
     void deleteEtudiant(Integer id);
+    void assugnEtudiantToDepartement(Integer etudiantId,Integer departemenId);
+    Etudiant addAndAssignEtudiantToEquipeAndContract(Etudiant e, Integer idContrat, Integer idEquipe);
 }
