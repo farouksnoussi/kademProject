@@ -12,4 +12,7 @@ public interface IEtudiant {
     void deleteEtudiant(Integer id);
     void assugnEtudiantToDepartement(Integer etudiantId,Integer departemenId);
     Etudiant addAndAssignEtudiantToEquipeAndContract(Etudiant e, Integer idContrat, Integer idEquipe);
+    //hedhi avec java
+    //public List<Etudiant> getEtudiantsByDepartement (Integer idDepartement);
+    Etudiant getEtudiantsByDepartement(Integer idDepartement);
 }

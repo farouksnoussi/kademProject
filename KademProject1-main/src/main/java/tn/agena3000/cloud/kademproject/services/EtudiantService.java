@@ -16,6 +16,8 @@ import tn.agena3000.cloud.kademproject.repositories.EtudiantRepository;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class EtudiantService implements IEtudiant {
@@ -89,5 +91,28 @@ public class EtudiantService implements IEtudiant {
         contrat.setEtudiant(e);
         //contratRepository.save(contrat);
         return e;
+    }
+
+    //Hedhi feha fazet keyword o b java
+
+    //@Override
+    //public List <Etudiant> getEtudiantsByDepartement( Integer idDepartement){
+        //Etudiant etudiant = etudiantRepository.findById(idDepartement).orElse(null);
+        //on recupére le département by id mte3ou
+        //Departement departement = departementRepository.getById(idDepartement);
+        //keyword
+        //return etudiantRepository.findEtudiantByDepartement(departement);
+        //bl java
+        //Departement departement= departementRepository.findById(idDepartement).orElse(null);
+        //return departement.getEtudiants();
+    //}
+
+    //hedhi avec l variable id_depart eli mawjouda fil entity dapartement
+    @Override
+    public Etudiant getEtudiantsByDepartement( Integer idDepartement){
+       //Etudiant etudiant = etudiantRepository.findById(e.getIdEtudiant()).orElse(null);
+        // on recupére le département by id mte3ou
+       //Departement departement = departementRepository.getById(idDepartement);
+        return etudiantRepository.findEtudiantByDepartement_Id_depart(idDepartement);
     }
 }

@@ -3,7 +3,10 @@ package tn.agena3000.cloud.kademproject.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.agena3000.cloud.kademproject.entities.Contrat;
+import tn.agena3000.cloud.kademproject.entities.Departement;
 import tn.agena3000.cloud.kademproject.services.IContrat;
+import tn.agena3000.cloud.kademproject.services.IDepartement;
+import tn.agena3000.cloud.kademproject.services.IEtudiant;
 
 import java.util.List;
 
@@ -12,6 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ContratController {
     private final IContrat contratService;
+    private final IEtudiant etudiantServise;
 
     @RequestMapping("/")
     public List<Contrat> getAllContrats()
@@ -39,4 +43,7 @@ public class ContratController {
     {
         contratService.updateContrat(contrat);
     }
+    @GetMapping("/{get}")
+    public void etudiant(@PathVariable int idDepartement) {etudiantServise.getEtudiantsByDepartement(idDepartement);}
+
 }
