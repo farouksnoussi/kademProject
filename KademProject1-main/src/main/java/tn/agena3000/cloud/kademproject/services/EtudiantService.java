@@ -113,6 +113,6 @@ public class EtudiantService implements IEtudiant {
        //Etudiant etudiant = etudiantRepository.findById(e.getIdEtudiant()).orElse(null);
         // on recupére le département by id mte3ou
        //Departement departement = departementRepository.getById(idDepartement);
-        return etudiantRepository.findEtudiantByDepartement_Id_depart(idDepartement);
+        return etudiantRepository.findEtudiantByDepartementIddepart(idDepartement);
     }
 }

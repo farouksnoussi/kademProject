@@ -19,7 +19,7 @@ public class Departement implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_depart;
+    private int iddepart;
     private String nom_depart;
     @OneToMany(mappedBy = "departement")
     List<Etudiant> etudiants ;
